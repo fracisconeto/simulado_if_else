@@ -5,14 +5,35 @@
     //Melancia: 3 Kg
     //Abacate: 4 Unidades
     //Cebola: 1.1 Kg
-    //Peça para o usuário informar o preço do Kg ou da Unidade de cada um dos produtos que comprou (citados acima) e peça também para o usuário informar quanto dinheiro possui para realizar a compra.
-    //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro, e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
+    //Peça para o usuário informar o preço do Kg ou da Unidade de cada um dos produtos que comprou (citados acima)
+    //  e peça também para o usuário informar quanto dinheiro possui para realizar a compra.
+    //Calcule o custo total dos alimentos e verifique se há dinheiro suficiente para realizar a compra, indicando se sobrará ou faltará dinheiro,
+    //  e também apresentando qual foi a quantia que sobrou ou faltou para realizar a compra. Apresente também na tela o valor total da compra.
 
     //ENTRADA
+    const mamao = Number(prompt(`qual e o preço do mamão ?`))
+    const Melancia = Number(prompt(`qual e o preço do kilo da  melancia ?`))
+    const abacate = Number(prompt(`qual e o preço da abacate?`))
+    const cebola = Number(prompt(`qual e o preço do kilo da cebola ?`))
+    const grana = Number(prompt(`informe o dinheiro que vc tem para realizar a compra?`))
+    const mamao2 =mamao *5 ;
+    const melancia2 = Melancia * 3;
+    const abacate2 = abacate * 4;
+    const cebola2 = cebola * 1.1 ;  
+    const total = mamao2 + melancia2 + abacate2 + cebola2
+    const faltou = total - grana
+    const sobrou = grana - total
 
-
-    //PROCESSAMENTO
-
+//PROCESSAMENTO
+ if ( total > grana ){
+    alert( `faltar dinheiro para realizar a compra faltara ${faltou} reais `)
+ }
+ else if (grana > total ){
+    alert(`sobrará dinheiro da compra sobrou ${sobrou} reais ` )
+ }
+  else{
+    alert(`resposta invalida`)
+  }
 
     //SAÍDA
 
